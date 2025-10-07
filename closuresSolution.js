@@ -10,14 +10,14 @@ let counter = function (increment) {
         Create and return an inner function that receives a value increment
         and increments the value stored in count by increment.
     */
-   return function (increment) {
+   return function () {
     count += increment;
     return count;
    }
 }
 
-let countByTwo = counter; // set this variable to a closure that produces a counter that adds two each time it's called
-let countByOne = counter; // set this variable to a closure that produces a counter that adds 1 each time it's called
+let countByTwo = counter(2); // set this variable to a closure that produces a counter that adds two each time it's called
+let countByOne = counter(1); // set this variable to a closure that produces a counter that adds 1 each time it's called
 
 // DO NOT change the lines below
 console.log(countByTwo());
